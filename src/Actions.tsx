@@ -1,43 +1,6 @@
 import * as React from 'react'
-import styled from 'styled-components';
-
-const checkVersion = (version: string): Promise<string | undefined> => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (version === 'React 19') {
-                resolve(undefined);
-            } else {
-                reject('Wrong version')
-            }
-        }, 2000)
-    })
-}
-
-const Wrapper = styled.section`
-  padding: 4em;
-  background: #141a20;
-`;
-
-const Header = styled.h3`
-color:white
-`
-const Error = styled.p`
-color: red
-`
-const Label = styled.label`
-color:#0f0;
-padding: 0.25em 1em;
-`
-const Button = styled.button`
-  background: #BF4F74;
-  color: white;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #f00;
-  border-radius: 3px;
-`;
-
+import { Button, Header, Label, Wrapper, Error } from './StylesComps';
+import { checkVersion } from './utils';
 
 function CheckVersion() {
     const [version, setVersion] = React.useState('')
