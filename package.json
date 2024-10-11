@@ -1,26 +1,38 @@
 {
   "name": "react19-whatsnew",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": {
+    "name": "Prince Cheruvathur"
+  },
+  "license": "LGPL-3.0-or-later",
+  "homepage": "./",
   "dependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.25.8",
+    "@babel/preset-react": "^7.25.7",
+    "@babel/preset-typescript": "^7.25.7",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.113",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
+    "@types/react": "npm:types-react@19.0.0-rc.0",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.2.1",
+    "html-webpack-plugin": "^5.6.0",
+    "react": "^19.0.0-rc-70fb1363-20241010",
+    "react-dom": "^19.0.0-rc-70fb1363-20241010",
+    "styled-components": "^6.1.13",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack serve --mode development --open",
+    "build": "webpack",
+    "test": "test"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +51,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "react-dev-utils": "^12.0.1",
+    "source-map-loader": "^5.0.0",
+    "style-loader": "^4.0.0",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
