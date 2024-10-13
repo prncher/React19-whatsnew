@@ -14,6 +14,7 @@
     "@babel/preset-react": "^7.25.7",
     "@babel/preset-typescript": "^7.25.7",
     "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.113",
@@ -25,14 +26,16 @@
     "html-webpack-plugin": "^5.6.0",
     "react": "^19.0.0-rc-70fb1363-20241010",
     "react-dom": "^19.0.0-rc-70fb1363-20241010",
+    "react-scripts": "file:react-scripts",
     "styled-components": "^6.1.13",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack serve --mode development --open",
-    "build": "webpack",
-    "test": "test"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
