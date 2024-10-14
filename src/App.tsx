@@ -12,14 +12,29 @@ import CheckVersion from './Actions';
 import CheckVersionWithForm from './FormAction';
 import { CommentsSection } from './CommentsContext';
 import Suspensed from './Suspensed';
+import FormStatus from './FormStatus';
+import { DemoButton } from './StylesComps';
+import OptimisticState from './OptimisticState';
+
+type types = 'useFormStatus'|'useActionState'|
+              'useTransition'|'Suspense'| 'use' | 'useOptimistic'
 
 function App() {
+  const [type, setType] = React.useState<types>('useTransition')
   return (
     <div className="App-header">
-      <Suspensed />
-      <CheckVersion />
-      <CheckVersionWithForm />
-      <CommentsSection />
+      <DemoButton onClick={() => setType('useTransition')}>useTransition Demo</DemoButton>
+      <DemoButton onClick={() => setType('useActionState')}>useActionState Demo</DemoButton>
+      <DemoButton onClick={() => setType('use')}>use Demo</DemoButton>
+      <DemoButton onClick={() => setType('useFormStatus')}>useFormStatus Demo</DemoButton>
+      <DemoButton onClick={() => setType('useOptimistic')}>useOptimistic Demo</DemoButton>
+      <DemoButton onClick={() => setType('Suspense')}>Suspense Loading Demo</DemoButton>
+      {type === 'useTransition' && <CheckVersion />}
+      {type === 'useActionState' && <CheckVersionWithForm />}
+      {type === 'use' && <CommentsSection />}
+      {type === 'useFormStatus' && <FormStatus />}
+      {type === 'useOptimistic' && <OptimisticState />}
+      {type === 'Suspense' && <Suspensed />}
     </div>
   );
 }

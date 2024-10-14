@@ -30,12 +30,22 @@ color:#0f0;
 padding: 0.25em 1em;
 `
 export const Button = styled.button`
-background: #BF4F74;
+pointer-events:${(props)=>props.disabled?'none':null};
+background: ${(props)=>props.disabled?'#BF4F32':'#BF4F74'};
 color: white;
 font-size: 1em;
 margin: 1em;
 padding: 0.25em 1em;
-border: 2px solid #f00;
+border: 2px solid ${(props)=>props.disabled?'#555':'#888'};
+border-radius: 3px;
+`;
+
+export const DemoButton = styled.button`
+background: #999;
+color: white;
+font-size: 1em;
+margin: 1em;
+padding: 0.25em 1em;
 border-radius: 3px;
 `;
 

@@ -6,7 +6,7 @@
     "name": "Prince Cheruvathur"
   },
   "license": "LGPL-3.0-or-later",
-  "homepage": "./",
+  "homepage": ".",
   "dependencies": {
     "@babel/core": "^7.25.8",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
@@ -34,6 +34,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "prod" : "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -56,10 +57,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@svgr/webpack": "^8.1.0",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "react-dev-utils": "^12.0.1",
+    "serve": "^14.2.3",
     "source-map-loader": "^5.0.0",
     "style-loader": "^4.0.0",
     "svg-inline-loader": "^0.8.2",
