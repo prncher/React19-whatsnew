@@ -1,7 +1,6 @@
 import { useFormStatus } from "react-dom"
 import { Button, Form, Header } from "./StylesComps"
 import React from "react"
-import { wait } from "@testing-library/user-event/dist/utils"
 
 const SubmitButton = () => {
     const { pending, data } = useFormStatus()
