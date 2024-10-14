@@ -16,7 +16,7 @@ function CheckVersion() {
     const [error, setError] = React.useState('')
     const [isPending, startTransition] = React.useTransition()
 
-    const handleSubmit = () => {
+    const handleClick = () => {
         startTransition(async () => {
             try {
                 const error = await checkVersion(version);
@@ -45,7 +45,7 @@ function CheckVersion() {
                 <br />type React 19 in the input to test</Header>
             <Label htmlFor={'version'}>Version:</Label>
             <input name={'version'} value={version} onChange={(ev) => setVersion(ev.target.value)} />
-            <Button onClick={handleSubmit} disabled={isPending}>Check version</Button>
+            <Button onClick={handleClick} disabled={isPending}>Check version</Button>
             {error && <Error>{error}</Error>}
         </Wrapper>
     </section>

@@ -15,6 +15,6 @@ export const checkVersion = (version: string): Promise<string | undefined> => {
             } else {
                 reject('Wrong version')
             }
-        }, 2000)
+        }, 8000)
     })
 }

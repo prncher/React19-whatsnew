@@ -7,6 +7,7 @@ interface LocalTime {
 }
 
 const waitedTime = (): Promise<string> => {
+ //   await new Promise((r) => setTimeout(r, 3000));
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(new Date().toLocaleTimeString())
@@ -24,16 +25,16 @@ const OptimisticState = () => {
             return { text: newTime, fetching: true }
          });
 
-    async function sendMessage() {
+    async function getTime() {
         const newTime = await waitedTime();
-        setTime((messages: LocalTime) => { 
+        setTime((t: LocalTime) => { 
             return { text: newTime, fetching: false } 
         });
     }
 
     async function getNewTime() {
         updateTime(time.text);
-        await sendMessage();
+        await getTime();
     }
 
     return <>

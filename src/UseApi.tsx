@@ -8,7 +8,7 @@
  *
  */
 import React from "react"
-import { CommentsContext } from "./CommentsContext";
+import { CommentsContext, UsableComments } from "./CommentsContext";
 import { Header, ListItem, Wrapper } from "./StylesComps";
 
 interface Comment {
@@ -19,7 +19,7 @@ interface Comment {
 const CommentsComp = (props: { comments: Comment[] }) => {
     const { comments } = props
     return <Wrapper color={'#042210'}>
-        <Header>Use Hook in React 19. Wait for the promise to get resolved</Header>
+        <Header>use API in React 19. Wait for the promise to get resolved</Header>
         {Array.isArray(comments) && comments.length > 0 ?
             comments.map(c => 
             <ListItem key={c.id}>{c.comment}</ListItem>) :

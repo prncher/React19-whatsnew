@@ -22,7 +22,6 @@ const CheckVersionWithForm = () => {
                 if (error) {
                     return error;
                 } else {
-                    // This is a hack for now.
                     inputRef && inputRef.current?.setAttribute('value', 'Correct Version');
                     return
                 }
